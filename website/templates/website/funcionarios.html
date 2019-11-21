@@ -1,0 +1,26 @@
+<html>
+<head>
+	<title>Pagina de Funcion&aacute;rios</title>
+	<style>
+		table, th, td {
+  			border: 1px solid black;
+		}
+	</style>	
+</head>
+<body>
+	<h1>Funcion&aacute;rios</h1>
+	<table width=50%>
+		<tr><th>Nome</th><th>Sobrenome</th><th>Remunera&ccedil;&atilde;o</th><th>Tempo</th></tr>
+		<tbody>
+			{% for funcionario in funcionarios %}
+ 			<tr>
+ 				<td>{{ funcionario.nome }}</td>
+ 				<td>{{ funcionario.sobrenome }}</td>
+ 				<td>R$ {{ funcionario.remuneracao }}</td>
+ 				<td>{{ funcionario.tempo_de_servico }}</td>
+ 			</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+</body>
+</html>
